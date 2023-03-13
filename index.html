@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div
+      id="root"
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(76, 73, 73);
+        height: 100vh;
+      "
+    ></div>
+
+    <script type="text/babel">
+      var main_container = {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "400px",
+        height: "500px",
+        backgroundColor: "white",
+      };
+
+      function Div1() {
+        return (
+          <div style={main_container}>
+            <img
+              src="https://thumbs.dreamstime.com/b/man-profile-cartoon-smiling-vector-illustration-graphic-design-135443492.jpg"
+              style={{ width: "100px", height: "100px", borderRadius: "50px" }}
+            />
+
+            <h2 style={{ color: "#646464", }}>Neeraj Dwivedi</h2>
+            <p style={{ color: "gray", marginTop: "-1em" }}>I enjoy going for a run everyday</p>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              <div style={{ marginRight: "1em" }}>
+                <p style={{ color: "#AB2DD0", paddingLeft: "1em", fontSize:20 }}>40</p>
+                <p style={{ color: "gray", marginTop: "-1em", fontSize: 12, }}>POSTS</p>
+              </div>
+              <div style={{ marginRight: "1em" }}>
+                <p style={{ color: "#AB2DD0", paddingLeft: "1em", fontSize:20 }}>300</p>
+                <p style={{ color: "gray", marginTop: "-1em",fontSize: 12, }}>FOLLOWER</p>
+              </div>
+              <div>
+                <p style={{ color: "#AB2DD0", paddingLeft: "1em", fontSize:20 }}>200</p>
+                <p style={{ color: "gray", marginTop: "-1em",fontSize: 12, }}>FOLLOWING</p>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              <div
+                style={{
+                  marginRight: "2em",
+                }}
+              >
+                <button
+                  style={{
+                    backgroundColor: "#AB2DD0",
+                    padding:"7px",
+                    color: "white",
+                    width: "130%",
+                    height: "120%",
+                    fontSize: "18px",
+                    borderRadius: "5px",
+                    border: "none",
+                  }}
+                >
+                  Follow
+                </button>
+              </div>
+              <div>
+                <button
+                  style={{
+                    backgroundColor: "#F733E5",
+                    padding:"7px",
+                    color: "white",
+                    width: "130%",
+                    height: "120%",
+                    fontSize: "18px",
+                    borderRadius: "5px",
+                    border: "none",
+                  }}
+                >
+                  Message
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      }
+
+      function Component() {
+        return (
+          <div>
+            <Div1 />
+          </div>
+        );
+      }
+
+      ReactDOM.render(<Component />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
